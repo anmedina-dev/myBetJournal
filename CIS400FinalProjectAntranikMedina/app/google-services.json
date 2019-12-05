@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "384617826465",
+    "firebase_url": "https://mybetjournal.firebaseio.com",
+    "project_id": "mybetjournal",
+    "storage_bucket": "mybetjournal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384617826465:android:9b1b59c1e06a610b1e08e0",
+        "android_client_info": {
+          "package_name": "com.example.cis400finalprojectantranikmedina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384617826465-df0gor668dog12ch957ss0tjjgdln6vh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cis400finalprojectantranikmedina",
+            "certificate_hash": "2c225bf66bd4aeb223f55daff0f9b4ccea3e622d"
+          }
+        },
+        {
+          "client_id": "384617826465-5hk4g2pnjm10p4qj9dmn7i6onb8pus16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO7VBVSLWtFNAidlNORJ0uNGNGvO2SmwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "384617826465-5hk4g2pnjm10p4qj9dmn7i6onb8pus16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

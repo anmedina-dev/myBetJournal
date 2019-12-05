@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OUHistoryFrag">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/accentGray"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="Over/Under Bets"
+                android:gravity="center">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="5dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:text="Amount of Bets: "
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"></TextView>
+            <TextView
+                android:id="@+id/OUHistoryBetAmount"
+                android:layout_weight=".3"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginRight="50dp"></TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="5dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:text="Profits: "
+                android:textSize="25dp"
+                android:paddingLeft="100dp"
+                android:layout_marginLeft="20dp"></TextView>
+            <TextView
+                android:id="@+id/OUHistoryProfit"
+                android:layout_weight=".3"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginRight="50dp"></TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
