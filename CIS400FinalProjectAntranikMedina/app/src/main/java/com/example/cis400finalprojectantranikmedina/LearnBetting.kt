@@ -5,23 +5,30 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.LinearLayout
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.youtube.player.YouTubeInitializationResult
+import com.google.android.youtube.player.YouTubePlayer
+import com.google.android.youtube.player.YouTubePlayerSupportFragment
 import com.google.gson.Gson
 
 import kotlinx.android.synthetic.main.activity_learn_betting.*
 
-class LearnBetting : AppCompatActivity(){
+class LearnBetting : AppCompatActivity(), YouTubePlayer.OnInitializedListener{
     lateinit var  dataList: MutableList<BetTypesList>
+    private val RECOVERY_DIALOG_REQUEST = 1
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_learn_betting)
         setSupportActionBar(toolbar)
+        val youTubePlayerFragment = supportFragmentManager.findFragmentById(R.id.official_player_view) as YouTubePlayerSupportFragment?
+        youTubePlayerFragment?.initialize("AIzaSyCIjOybU0cVyo9e8SKgjPhX6he3Cf5awBE", this)
 
         val recyclerView = findViewById(R.id.learnBetRv) as RecyclerView
 
@@ -64,6 +71,23 @@ class LearnBetting : AppCompatActivity(){
             else -> {
                 return true
             }
+        }
+    }
+    override fun onInitializationSuccess(provider: YouTubePlayer.Provider,youTubePlayer: YouTubePlayer,wasRestored: Boolean) {
+        if (!wasRestored) {
+            youTubePlayer.cueVideo("ostbAM8STRk")
+        }
+    }
+
+    override fun onInitializationFailure(provider: YouTubePlayer.Provider,youTubeInitializationResult: YouTubeInitializationResult) {
+        if (youTubeInitializationResult.isUserRecoverableError) {
+            youTubeInitializationResult.getErrorDialog(this, RECOVERY_DIALOG_REQUEST).show()
+        } else {
+            val errorMessage = String.format(
+                "There was an error initializing the YouTubePlayer (%1\$s)",
+                youTubeInitializationResult.toString()
+            )
+            Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show()
         }
     }
 

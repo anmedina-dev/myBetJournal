@@ -41,6 +41,8 @@
                 android:layout_marginLeft="20dp"></TextView>
             <TextView
                 android:id="@+id/MLHistoryBetAmount"
+                android:gravity="center"
+                android:textSize="20dp"
                 android:layout_weight=".3"
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
@@ -63,6 +65,8 @@
                 android:layout_marginLeft="20dp"></TextView>
             <TextView
                 android:id="@+id/MLHistoryProfit"
+                android:gravity="center"
+                android:textSize="20dp"
                 android:layout_weight=".3"
                 android:layout_width="2dp"
                 android:layout_height="match_parent"

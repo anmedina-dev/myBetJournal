@@ -176,22 +176,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="15dp">
+
             <Button
                 android:id="@+id/wonLiveBetBtnML"
-                android:layout_marginRight="5dp"
                 android:layout_width="2dp"
-                android:layout_weight="0.4"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.4"
                 android:background="@color/btnOrangeColor"
-                android:text="Win bet?"></Button>
+                android:text="Win bet?"
+                android:textColor="@color/white"></Button>
+
             <Button
                 android:id="@+id/lostLiveBetBtnML"
-                android:layout_marginLeft="5dp"
                 android:layout_width="2dp"
-                android:layout_weight="0.4"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.4"
                 android:background="@color/btnOrangeColor"
-                android:text="Lose bet?"></Button>
+                android:text="Lose bet?"
+                android:textColor="@color/white"></Button>
         </LinearLayout>
 
     </LinearLayout>
